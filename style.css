@@ -178,6 +178,7 @@ p {
 .sub_picture {
     width: 100%;
     height: auto;
+    filter: grayscale(70%);
 }
 
 .sub_text {
