@@ -1,3 +1,6 @@
+<?php
+   include('session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +18,11 @@
 <body>
     <div id="navbar">
         <a href="#" class="home button">
-            <b>INT</b> House Building
+            <b>INT House Building </b> 
+            <?php  
+            if(isset($_SESSION['login_user'])){
+                echo "Welcome ". $login_session; 
+            }?>
         </a>
         <a href="#contact" class="button">
             Liên hệ
@@ -26,6 +33,7 @@
         <a href="#projects" class="button">
             Dự án
         </a>
+        <button><a href = "logout.php">Sign Out</a></button>
     </div>
     <div id="navbar_mobile">
         <div id="unactive_navbar">
